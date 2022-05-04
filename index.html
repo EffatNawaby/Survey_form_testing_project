@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap_4/css/bootstrap.min.css">
+    <title>Survey Form</title>
+</head>
+<style>
+    body {
+        background-color: rgb(88, 103, 173);
+        padding: 50px;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    #title {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 0px;
+    }
+    #description {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 0px;
+    }
+    #main {
+        background-color: rgba(19, 23, 44, 0.712);
+        margin: auto;
+        padding: 40px;
+        height: auto;
+        border-radius: 1%;
+    }
+    label {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    input[type="text"], [type="email"], [type="number"],  select {
+        width: 100%;
+        margin-bottom: 5px;
+        border-radius: 2%;
+        height: 40px;
+        border: none;
+        outline: none;
+        padding: 10px;
+    }
+    textarea {
+        width: 100%;
+        margin-bottom: 5px;
+        border-radius: 2%;
+        border: none;
+        outline: none;
+        padding: 10px;
+    }
+    input[type="radio"], [type="checkbox"] {
+        font-size: 20px;
+    }
+    button {
+        background-color: rgba(19, 224, 19, 0.5);
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 2%;
+        border: none;
+        outline: none
+    }
+</style>
+<body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+
+    <form id="main" action="#" class="col-sm-12 col-md-6">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter Your Name" id="name" required o	oninvalid="this.setCustomValidity('Please, Enter your name.')" oninput="this.setCustomValidity('')"> <br>
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter Your Email" id="email" required o	oninvalid="this.setCustomValidity('Please, Enter your email address.')" oninput="this.setCustomValidity('')"> <br>
+
+        <label for="age">Age (Optional)</label>
+        <input type="number" placeholder="Age" id="age"> <br>
+
+        <label for="role">Which option best describes your current role?</label>
+        <select id="role" name="role" required oninvalid="this.setCustomValidity('Please, select an option.')" oninput="this.setCustomValidity('')">
+            <option value="Select Current Role" selected>Select Current Role</option>
+            <option value="Student">Student</option>
+            <option value="Full Time Job">Full Time Job</option>
+            <option value="Full Time Learner">Full Time Learner</option>
+            <option value="Prefer Not To Say">Prefer Not To Say</option>
+            <option value="Other">Other</option>
+        </select> <br>
+
+        <label for="recommand">Would you recommend freeCodeCamp to a friend?</label> <br>
+        <input type="radio" id="recommand" name="Definitely" checked> Definitely <br>
+        <input type="radio" id="recommand" name="Maybe"> Maybe <br>
+        <input type="radio" id="recommand" name="Not sure"> Not sure <br> <br>
+
+        <label for="feature">What is your favorite feature of freeCodeCamp?</label>
+        <select id="feature" name="feature" required o	oninvalid="this.setCustomValidity('Please, select an option.')" oninput="this.setCustomValidity('')">
+            <option value="Select an Option" selected>Select an Option</option>
+            <option value="Challenges">Challenges</option>
+            <option value="Projects">Projects</option>
+            <option value="Community">Community</option>
+            <option value="Open Source">Open Source</option>
+        </select> <br>
+
+        <label for="langs">What would you like to see improved? (Check all that apply)</label> <br>
+        <input type="checkbox" name="front" id="langs"> Front-end Projects <br>
+        <input type="checkbox" name="back" id="langs"> Back-end Projects <br>
+        <input type="checkbox" name="data" id="langs"> Data Visualization <br>
+        <input type="checkbox" name="challenge" id="langs"> Challenges <br>
+        <input type="checkbox" name="community" id="langs"> Open Source Community <br>
+        <input type="checkbox" name="gitter" id="langs"> Gitter help rooms <br>
+        <input type="checkbox" name="video" id="langs"> Videos <br>
+        <input type="checkbox" name="city" id="langs"> City Meetups <br>
+        <input type="checkbox" name="wiki" id="langs"> Wiki <br>
+        <input type="checkbox" name="forum" id="langs"> Forum <br>
+        <input type="checkbox" name="additional" id="langs"> Additional Courses <br> <br>
+
+        <label for="comment">Any comments or suggestions?</label>
+        <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Enter Your Comment Here...!"></textarea> <br> <br>
+
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+</body>
+</html>
